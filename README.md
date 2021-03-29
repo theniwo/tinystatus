@@ -13,7 +13,6 @@ git clone https://github.com/theniwo/tinystatus
 cd tinystatus
 ./tinystatus
 ```
-Edit config files under ./tinystatus/.tinystatus/
 
 or
 
@@ -30,9 +29,11 @@ docker run -d \
         theniwo/tinystatus:latest
 ```
 *Info*
-- Set the amount of ram to your liking. (128 MB - 256 MB should be plenty)
+- Edit config files under `./tinystatus/.tinystatus/`
+- If you change the configuration you have to restart the container `docker restart tinystatus`
+- The status is updated every 10 seconds or `INTERVAL`
+- Set the maximum amount of ram to your liking. (64 MB - 128 MB should be plenty)
 - Of course you can change the port and add volumes, too. :wink:
-
 
 ## Connect
 
@@ -50,8 +51,6 @@ docker run -d \
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Infobox_info_icon.svg/1200px-Infobox_info_icon.svg.png" alt="drawing" width="20"/>
 
-* If you change the configuration you have to restart the container `docker restart tinystatus`
-* The status is updated every 10 seconds or `INTERVAL`.
 * The latest version will be updated regularly.
 
 **CONTACT**
