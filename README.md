@@ -12,6 +12,7 @@ Based on [tinystatus](https://github.com/bderenzo/tinystatus) by [bderenzo](http
 git clone https://github.com/theniwo/tinystatus
 ./tinystatus/tinystatus
 ```
+Edit config files under .tinystatus
 
 or
 
