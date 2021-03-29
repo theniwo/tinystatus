@@ -1,0 +1,10 @@
+docker run -d \
+	--name tinystatus \
+	--hostname tinystatus \
+	--restart unless-stopped \
+	--memory "128M" \
+	-p 8888:80 \
+	-v tinystatus_data:/root \
+	-v tinystatus_logs:/var/log \
+	theniwo/tinystatus:0.1
+
