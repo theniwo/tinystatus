@@ -10,7 +10,8 @@ Based on [tinystatus](https://github.com/bderenzo/tinystatus) by [bderenzo](http
 ## Usage
 ```
 git clone https://github.com/theniwo/tinystatus
-./tinystatus/tinystatus
+cd tinystatus
+./tinystatus
 ```
 Edit config files under .tinystatus
 
@@ -35,7 +36,7 @@ docker run -d \
 ## Connect
 
 ### Via webbrowser
-`http://IP:PORT`
+`http://IP:8888`
 
 
 ---
@@ -48,6 +49,8 @@ docker run -d \
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Infobox_info_icon.svg/1200px-Infobox_info_icon.svg.png" alt="drawing" width="20"/>
 
+If you change the configuration you have to restart the container `docker restart tinystatus`
+The status is updated ever 10 seconds.
 The latest version will be updated regularly.
 
 **CONTACT**
