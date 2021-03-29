@@ -1,6 +1,10 @@
 # tinystatus
 ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/theniwo/tinystatus) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/theniwo/tinystatus) ![Docker Pulls](https://img.shields.io/docker/pulls/theniwo/tinystatus) ![Docker Architectures](https://img.shields.io/badge/arch-x86%20%7C%20amd64-informational)
 
+tinystatus generates an html status page via shell script
+
+Based on [tinystatus](https://github.com/bderenzo/tinystatus) by [bderenzo](https://github.com/bderenzo)
+
 
 
 ## Usage
@@ -23,7 +27,7 @@ docker run -d \
 ## Connect
 
 ### Via webbrowser
-`http://IP:PORT`\
+`http://IP:PORT`
 
 
 ---
@@ -36,7 +40,7 @@ docker run -d \
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Infobox_info_icon.svg/1200px-Infobox_info_icon.svg.png" alt="drawing" width="20"/>
 
-The latest version will be updated regularly. \
+The latest version will be updated regularly.
 
 **CONTACT**
 
