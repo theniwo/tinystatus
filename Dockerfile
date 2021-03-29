@@ -8,19 +8,17 @@ WORKDIR /root
 # Run the command inside your image filesystem.
 
 # Install packets
-RUN DEBIAN_FRONTEND=noninteractive apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y apt-utils
-RUN DEBIAN_FRONTEND=noninteractive apt-get dist-upgrade -y
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y iputils-ping git curl netcat-openbsd coreutils
-RUN git clone https://github.com/bderenzo/tinystatus.git /root/tinystatus
+RUN DEBIAN_FRONTEND=noninteractive apt-get update &&\
+  DEBIAN_FRONTEND=noninteractive apt-get install -y iputils-ping git curl netcat-openbsd coreutils &&\
+  git clone https://github.com/bderenzo/tinystatus.git /root/tinystatus &&\
+  DEBIAN_FRONTEND=noninteractive apt-get remove git -y &&\
+  DEBIAN_FRONTEND=noninteractive apt-get autoremove -y &&\
+  DEBIAN_FRONTEND=noninteractive apt-get clean &&\
+  rm -rf /var/lib/apt/lists/* &&\
+  rm -rf /var/cache/debconf/*
 
 # Set Variables
 ENV INTERVAL "10"
-
-#Final update
-RUN DEBIAN_FRONTEND=noninteractive apt-get remove git -y
-RUN DEBIAN_FRONTEND=noninteractive apt-get autoremove -y
-RUN DEBIAN_FRONTEND=noninteractive apt-get clean
 
 # Inform Docker that the container is listening on the specified port at runtime.
 EXPOSE 80
