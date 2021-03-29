@@ -9,6 +9,13 @@ Based on [tinystatus](https://github.com/bderenzo/tinystatus) by [bderenzo](http
 
 ## Usage
 ```
+git clone https://github.com/theniwo/tinystatus
+./tinystatus/tinystatus
+```
+
+or
+
+```
 docker run -d \
         --name tinystatus \
         --hostname tinystatus \

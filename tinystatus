@@ -3,8 +3,8 @@ docker run -d \
 	--hostname tinystatus \
 	--restart unless-stopped \
 	--memory "128M" \
+	-v $PWD/.tinystatus/checks.list:/root/tinystatus/checks.list:ro \
+	-v $PWD/.tinystatus/incidents.list:/root/tinystatus/incidents.list:ro \
 	-p 8888:80 \
-	-v tinystatus_data:/root \
-	-v tinystatus_logs:/var/log \
-	theniwo/tinystatus:0.1
+	theniwo/tinystatus:latest
 
