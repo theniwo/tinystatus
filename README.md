@@ -13,7 +13,7 @@ git clone https://github.com/theniwo/tinystatus
 cd tinystatus
 ./tinystatus
 ```
-Edit config files under .tinystatus
+Edit config files under ./tinystatus/.tinystatus/
 
 or
 
@@ -22,7 +22,8 @@ docker run -d \
         --name tinystatus \
         --hostname tinystatus \
         --restart unless-stopped \
-        --memory "128M" \
+        --memory "64M" \
+	-e INTERVAL=10 \
         -v $PWD/.tinystatus/checks.list:/root/tinystatus/checks.list:ro \
         -v $PWD/.tinystatus/incidents.list:/root/tinystatus/incidents.list:ro \
         -p 8888:80 \
@@ -49,16 +50,17 @@ docker run -d \
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Infobox_info_icon.svg/1200px-Infobox_info_icon.svg.png" alt="drawing" width="20"/>
 
-If you change the configuration you have to restart the container `docker restart tinystatus`
-The status is updated ever 10 seconds.
-The latest version will be updated regularly.
+* If you change the configuration you have to restart the container `docker restart tinystatus`
+* The status is updated every 10 seconds or INTERVAL.
+* The latest version will be updated regularly.
 
 **CONTACT**
 
-[disp@mailbox.org](mailto:disp@mailbox.org)
+[E-Mail](mailto:tinystatus@theniwo.de)
 
 **LINKS**
 
 [Docker Hub](https://hub.docker.com/repository/docker/theniwo/tinystatus)
 
 [Git Hub](https://github.com/theniwo/tinystatus)
+---
