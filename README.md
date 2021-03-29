@@ -51,7 +51,7 @@ docker run -d \
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Infobox_info_icon.svg/1200px-Infobox_info_icon.svg.png" alt="drawing" width="20"/>
 
 * If you change the configuration you have to restart the container `docker restart tinystatus`
-* The status is updated every 10 seconds or INTERVAL.
+* The status is updated every 10 seconds or `INTERVAL`.
 * The latest version will be updated regularly.
 
 **CONTACT**
@@ -63,4 +63,5 @@ docker run -d \
 [Docker Hub](https://hub.docker.com/repository/docker/theniwo/tinystatus)
 
 [Git Hub](https://github.com/theniwo/tinystatus)
+
 ---
